@@ -14,4 +14,16 @@ p {
     text-decoration: none;
 }
 
-@import url('https://fonts.cdnfonts.com/css/sophia-martini');
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@font-face {
+    font-family: 'sophia martini';
+    src: url("../fonts/Sophia\ Martini.otf");
+}
+
+/* @import url('https://fonts.cdnfonts.com/css/sophia-martini'); */

@@ -1,0 +1,53 @@
+/* 전역 파일임!!! 주의 필 */
+
+.header {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    background: linear-gradient(55deg, #cea346 45%, #ff968f 55%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    cursor: pointer !important;
+}
+
+.logo-item {
+    text-align: center;
+    font-family: 'Sophia Martini';
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo-item:nth-child(2) {
+    margin-top: -1rem;
+}
+
+.nav {
+    font-family: 'Palatino Linotype';
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: row;
+    width: 100%;
+    font-weight: bold;
+}
+
+.nav-item {
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+    /* border-bottom: #fff 1px solid; */
+    padding: .5rem 0;
+    position: relative;
+}

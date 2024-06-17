@@ -1,14 +1,14 @@
 <template>
     <div class="wave-gradient">
         <!-- if use image, use bg-main-page -->
-        <div class="main-page">
+        <div class="main-page no-select">
             <div class="site-title-section">
                 <div class="site-title">Caramelized</div>
                 <div class="site-title">Peach</div>
-                <div class="nav">
-                    <router-link to="/intro" class="nav-item" >Intro</router-link>
-                    <router-link to="/gallary" class="nav-item">Gallary</router-link>
-                    <router-link to="/archive" class="nav-item">Archive</router-link>
+                <div class="main-nav">
+                    <router-link to="/introduce" class="main-nav-item" >Introduce</router-link>
+                    <router-link to="/gallary" class="main-nav-item">Gallary</router-link>
+                    <router-link to="/archive" class="main-nav-item">Archive</router-link>
                 </div>
             </div>
         </div>

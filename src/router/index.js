@@ -15,7 +15,7 @@ const routes = [
     component: MainPage
   },
   {
-    path: '/intro',
+    path: '/introduce',
     name: 'introduce',
     component: Introduce
   },
