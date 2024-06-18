@@ -21,6 +21,12 @@ p {
     user-select: none;
 }
 
+#app{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .route-view{
     width: 85%;
     max-width: 1000px;
