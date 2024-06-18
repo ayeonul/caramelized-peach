@@ -21,6 +21,22 @@ p {
     user-select: none;
 }
 
+.route-view{
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: 'garam lotus';
+    src: url("../fonts/나눔손글씨\ 가람연꽃.ttf");
+}
+
+@font-face {
+    font-family: 'RadiantlySignature';
+    src: url("../fonts/RadiantlySignature.otf");
+}
+
 @font-face {
     font-family: 'sophia martini';
     src: url("../fonts/Sophia\ Martini.otf");

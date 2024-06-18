@@ -1,4 +1,4 @@
-.bg-main-page {
+/* .bg-main-page {
   width: 100vw;
   height: 100vh;
   left: 0;
@@ -7,7 +7,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 @keyframes gradientWave {
   0% {

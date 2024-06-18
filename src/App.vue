@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header v-show="showHeader"/>
-    <router-view/>
+    <Header v-show="isRoute"/>
+    <router-view :class="{'route-view': isRoute}"/>
   </div>
 </template>
 
@@ -12,9 +12,9 @@ export default {
     Header
   },
   computed: {
-    showHeader() {
+    isRoute() {
       return this.$route.path !== '/';
-    }
+    },
   }
 };
 </script>
