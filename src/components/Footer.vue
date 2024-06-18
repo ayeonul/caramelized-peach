@@ -1,5 +1,6 @@
 <template>
     <div class="footer-wave-gradient">
+      
     </div>
 </template>
 
@@ -36,7 +37,7 @@ export default {
 .footer-wave-gradient {
   width: 100%;
   height: 100px;
-  background: linear-gradient(30deg, #cea346 40%, #ff968f 60%);
+  background: linear-gradient(30deg, #e4c37c 40%, #ffc4c0 60%);
   background-size: 200% 200%;
   position: relative;
   overflow: hidden;

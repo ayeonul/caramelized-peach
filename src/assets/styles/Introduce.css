@@ -1,0 +1,58 @@
+.profile {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Pretendard';
+}
+
+.profile-pic {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic-caption {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #666;
+    padding-top: 0.5rem;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 230px);
+}
+
+.name-section {
+    display: flex;
+    height: fit-content;
+    align-items: flex-end;
+}
+
+.eng-name {
+    height: fit-content;
+}
+
+.kor-name {
+    height: fit-content;
+    font-weight: 600;
+}
+
+.bio {
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 0.9rem;
+    width: calc(100% - 30px);
+    word-break: keep-all;
+    line-height: 1.2rem;
+}

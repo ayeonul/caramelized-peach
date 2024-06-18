@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "swiper": "^5.4.5",
     "vue": "^2.6.14",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-router": "^3.5.1",
+    "vue-unicons": "^3.3.1",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
@@ -23,6 +26,8 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "sass": "^1.77.6",
+    "sass-loader": "^10.5.2",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {

@@ -48,4 +48,34 @@ p {
     src: url("../fonts/Sophia\ Martini.otf");
 }
 
+@font-face {
+    font-family: 'palatino';
+    font-weight: 400;
+	font-display: swap;
+    src: url("../fonts/palatinolinotype_roman.ttf");
+}
+
+@font-face {
+    font-family: 'palatino';
+    font-weight: 600;
+	font-display: swap;
+    src: url("../fonts/palatinolinotype_bold.ttf");
+}
+
+@font-face {
+    font-family: 'palatino';
+    font-weight: 400;
+    font-style: italic;
+	font-display: swap;
+    src: url("../fonts/palatinolinotype_italic.ttf");
+}
+
+@font-face {
+    font-family: 'palatino';
+    font-weight: 600;
+    font-style: italic;
+	font-display: swap;
+    src: url("../fonts/palatinolinotype_bolditalic.ttf");
+}
+
 /* @import url('https://fonts.cdnfonts.com/css/sophia-martini'); */

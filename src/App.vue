@@ -26,5 +26,6 @@ export default {
 </script>
 
 <style>
+@import url('@/assets/styles/pretendard.css');
 @import url('@/assets/styles/App.css');
 </style>
