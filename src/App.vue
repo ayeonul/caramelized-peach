@@ -19,8 +19,8 @@ export default {
     },
     computed: {
         isRoute() {
-            const base = process.env.NODE_ENV === 'production' ? '/caramelized-peach/' : '/';
-            return this.$route.path !== base;
+            const base = process.env.NODE_ENV === 'production' ? '/caramelized-peach' : '';
+            return this.$route.path !== `${base}/`;
         },
     },
 };
