@@ -8,7 +8,7 @@ import Gallary from '../views/Gallary.vue'
 
 Vue.use(VueRouter)
 
-const base = process.env.NODE_ENV === 'production' ? '/REPOSITORY_NAME/' : '/'
+const base = process.env.NODE_ENV === 'production' ? '/caramelized-peach/' : '/'
 
 const routes = [
   {

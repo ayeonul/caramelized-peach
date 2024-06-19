@@ -16,9 +16,11 @@
 export default {
     methods: {
         isRoute(targetRoute) {
-            if (this.$route.path === targetRoute) {
+            const base = process.env.NODE_ENV === 'production' ? '/caramelized-peach' : '';
+            if (this.$route.path === `${base}${targetRoute}`) {
                 return 'is-active';
             }
+            return '';
         },
     },
 };
