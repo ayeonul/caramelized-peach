@@ -8,6 +8,8 @@ import Gallary from '../views/Gallary.vue'
 
 Vue.use(VueRouter)
 
+const base = process.env.NODE_ENV === 'production' ? '/REPOSITORY_NAME/' : '/'
+
 const routes = [
   {
     path: '/',
@@ -33,7 +35,8 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: "history"
+  mode: "history",
+  base: base
 })
 
 export default router
