@@ -3,11 +3,14 @@
     display: flex;
     flex-direction: row;
     font-family: 'Pretendard';
+    position: relative;
+    /* Ensure that position context is set */
 }
 
 .profile-pic {
     display: flex;
     flex-direction: column;
+    flex: 0 0 auto;
 }
 
 .profile-pic img {
@@ -27,7 +30,18 @@
 .profile-text {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 230px);
+    margin-left: 30px;
+    flex-grow: 1;
+    word-break: keep-all;
+}
+
+.profile-text.martin {
+    padding-left: 30px
+}
+
+.profile-text.alley {
+    align-items: flex-end;
+    padding-right: 30px
 }
 
 .name-section {
@@ -40,6 +54,21 @@
     height: fit-content;
 }
 
+.eng-name.martin {
+    font-family: 'RadiantlySignature';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc000;
+}
+
+.eng-name.alley {
+    font-size: 3rem;
+    font-family: 'garam lotus';
+    font-weight: bold;
+    color: #ff968f;
+    padding: 0.7rem 0;
+}
+
 .kor-name {
     height: fit-content;
     font-weight: 600;
@@ -50,9 +79,84 @@
     font-weight: 500;
 }
 
+.bio.martin {
+    margin-top: -0.5rem
+}
+
 .desc {
     font-size: 0.9rem;
     width: calc(100% - 30px);
-    word-break: keep-all;
+
     line-height: 1.2rem;
+}
+
+.desc.alley {
+    text-align: right
+}
+
+/* @media */
+@media (max-width: 900px) {
+    .profile.alley {
+        flex-direction: column-reverse;
+    }
+
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+        margin-top: 2rem;
+    }
+
+    .name-section.alley {
+        flex-direction: row-reverse;
+        margin-right: auto;
+    }
+
+    .profile-text {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 180px);
+    }
+
+    .profile-text.martin {
+        padding: 0;
+    }
+
+    .profile-text.alley {
+        padding: 0;
+        align-items: unset
+    }
+
+    .desc {
+        width: 100%;
+    }
+
+    .desc.alley {
+        text-align: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-text {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .desc {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .eng-name.martin{
+        font-size: 1rem;
+    }
+    .eng-name.alley{
+        font-size: 2rem;
+    }
 }

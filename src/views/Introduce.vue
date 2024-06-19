@@ -5,27 +5,20 @@
 
         <div class="profile">
             <div class="profile-pic">
-                <img src="@/assets/imgs/introduce/prof-martin.png"
-                style="box-shadow: -7px -5px 3px rgba(255, 192, 0, 0.4);" />
+                <img
+                    src="@/assets/imgs/introduce/prof-martin.png"
+                    style="box-shadow: -7px -5px 3px rgba(255, 192, 0, 0.4)"
+                />
                 <div class="profile-pic-caption">cm.@commi_59</div>
             </div>
-            <div class="profile-text" style="padding-left: 30px">
+            <div class="profile-text martin">
                 <div class="name-section">
-                    <span
-                        class="eng-name"
-                        style="
-                            font-family: 'RadiantlySignature';
-                            font-size: 1.5rem;
-                            font-weight: bold;
-                            color: #ffc000;
-                        "
-                        >Martin Chalfie</span
-                    >
+                    <span class="eng-name martin">Martin Chalfie</span>
                     <span class="kor-name" style="padding: 1rem 0.7rem"
                         >마틴 챌피</span
                     >
                 </div>
-                <div class="bio" style="margin-top: -0.5rem">
+                <div class="bio martin">
                     25세, 남성, 능력자(마인드 리더), 영국 출생, 숭고한 길 재단
                     후원자
                 </div>
@@ -45,29 +38,16 @@
                 </div>
             </div>
         </div>
-        <div class="profile">
-            <div
-                class="profile-text"
-                style="align-items: flex-end; padding-right: 30px"
-            >
-                <div class="name-section">
+        <div class="profile alley">
+            <div class="profile-text alley">
+                <div class="name-section alley">
                     <span class="kor-name" style="padding: 0.7rem">앨리</span>
-                    <span
-                        class="eng-name"
-                        style="
-                            font-size: 3rem;
-                            font-family: 'garam lotus';
-                            font-weight: bold;
-                            color: #ff968f;
-                            padding: 0.7rem 0;
-                        "
-                        >Alley Kim</span
-                    >
+                    <span class="eng-name alley">Alley Kim</span>
                 </div>
                 <div class="bio">
                     24세, 여성, 비능력자, 한국 출생, 컴퓨터 프로그래머
                 </div>
-                <div class="desc" style="text-align: right">
+                <div class="desc alley">
                     평범한 인생, 반복되는 무료한 날들. 이를 타파해보고자 훌쩍
                     떠나간 영국에서 어떤 남성을 마주하고 첫눈에 반하게 된다.
                     게다가 어찌저찌 알게 된 정보로는, 자기가 속한 재단을 위해
@@ -79,8 +59,10 @@
                 </div>
             </div>
             <div class="profile-pic">
-                <img src="@/assets/imgs/introduce/prof-alley.png" 
-                style="box-shadow: 7px 5px 3px rgba(255, 150, 143, 0.4)"/>
+                <img
+                    src="@/assets/imgs/introduce/prof-alley.png"
+                    style="box-shadow: 7px 5px 3px rgba(255, 150, 143, 0.4)"
+                />
                 <div class="profile-pic-caption">cm.@commi_59</div>
             </div>
         </div>
@@ -92,5 +74,5 @@ export default {};
 </script>
 
 <style scoped>
-@import url("@/assets/styles/Introduce.css");
+@import url('@/assets/styles/Introduce.css');
 </style>
