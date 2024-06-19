@@ -5,10 +5,9 @@ import Introduce from '../views/Introduce.vue'
 import ConvArch from '../views/ConvArch.vue'
 import Gallary from '../views/Gallary.vue'
 
-
 Vue.use(VueRouter)
 
-const base = process.env.NODE_ENV === 'production' ? '/caramelized-peach/' : '/'
+const base = process.env.NODE_ENV === 'production' ? '/caramelized-peach/' : '/';
 
 const routes = [
   {
@@ -35,7 +34,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: "history",
+  mode: 'history',
   base: base
 })
 

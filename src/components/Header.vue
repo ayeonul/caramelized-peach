@@ -5,9 +5,24 @@
             <div class="logo-item">Peach</div>
         </router-link>
         <div class="nav">
-            <router-link to="/introduce" class="nav-item" :class="isRoute('/introduce')">Introduce</router-link>
-            <router-link to="/gallary" class="nav-item" :class="isRoute('/gallary')">Gallary</router-link>
-            <router-link to="/archive" class="nav-item" :class="isRoute('/archive')">Archive</router-link>
+            <router-link
+                to="/introduce"
+                class="nav-item"
+                :class="isRoute('/introduce')"
+                >Introduce</router-link
+            >
+            <router-link
+                to="/gallary"
+                class="nav-item"
+                :class="isRoute('/gallary')"
+                >Gallary</router-link
+            >
+            <router-link
+                to="/archive"
+                class="nav-item"
+                :class="isRoute('/archive')"
+                >Archive</router-link
+            >
         </div>
     </div>
 </template>
@@ -16,8 +31,7 @@
 export default {
     methods: {
         isRoute(targetRoute) {
-            const base = process.env.NODE_ENV === 'production' ? '/caramelized-peach' : '';
-            if (this.$route.path === `${base}${targetRoute}`) {
+            if (this.$route.path === targetRoute) {
                 return 'is-active';
             }
             return '';
