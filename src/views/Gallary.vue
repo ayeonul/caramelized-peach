@@ -41,7 +41,7 @@ export default {
 .carousel-section {
     margin: 0 auto;
     width: 80%;
-    height: 50vh; /* 80% of the viewport height */
+    height: 50vh;
     padding: 2rem;
 }
 </style>
