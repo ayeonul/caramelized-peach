@@ -1,5 +1,4 @@
 .profile {
-    padding: 2rem;
     display: flex;
     flex-direction: row;
     font-family: 'Pretendard';
@@ -155,6 +154,7 @@
 @media (max-width: 500px){
     .eng-name.martin{
         font-size: 1rem;
+        margin-bottom: .3rem;
     }
     .eng-name.alley{
         font-size: 2rem;

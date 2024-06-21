@@ -1,7 +1,7 @@
 <template>
     <div id="app">
+        <Header v-show="isRoute" />
         <div class="content-container">
-            <Header v-show="isRoute" />
             <router-view :class="{ 'route-view': isRoute }" />
         </div>
         <Footer v-show="isRoute" />
