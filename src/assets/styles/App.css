@@ -35,6 +35,53 @@ p {
 }
 
 
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+}
+
+input[type="checkbox"]:checked+label::before {
+    background-color: #ff968f;
+    border-color: #ff968f;
+}
+
+input[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+input[type="checkbox"]:checked+label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label {
+    margin-left: 0.3rem;
+}
+
 
 @font-face {
     font-family: 'garam lotus';
