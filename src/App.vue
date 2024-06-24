@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="no-select">
         <Header v-show="isRoute" />
         <div class="content-container">
             <router-view :class="{ 'route-view': isRoute }" />

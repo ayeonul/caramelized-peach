@@ -1,7 +1,7 @@
 <template>
     <div class="wave-gradient">
         <!-- if use image, use bg-main-page -->
-        <div class="main-page no-select">
+        <div class="main-page">
             <div class="site-title-section">
                 <div class="site-title">Caramelized</div>
                 <div class="site-title">Peach</div>

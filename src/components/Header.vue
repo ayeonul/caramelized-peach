@@ -1,5 +1,5 @@
 <template>
-    <div class="header no-select route-view">
+    <div class="header route-view">
         <router-link to="/" class="logo-section">
             <div class="logo-item">Caramelized</div>
             <div class="logo-item">Peach</div>

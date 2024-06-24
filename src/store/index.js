@@ -6,6 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     showNSFW: false,
+    showPwPopup: false,
+    showSecretPopup: false,
   },
   getters: {
   },

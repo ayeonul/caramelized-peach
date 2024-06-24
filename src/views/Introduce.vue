@@ -1,10 +1,10 @@
 <template>
     <div>
-        <!-- <div class="intro-section" style="font-family:'RadiantlySignature'">Martin Chalfie</div>
-        <div class="intro-section" style="font-family:'garam lotus'; font-weight: bold">Alley Kim</div> -->
+        <Secret v-if="showSecretPopup"/>
+        <PWPopup v-if="showPwPopup"/>
 
         <div class="profile">
-            <div class="profile-pic">
+            <div class="profile-pic" @click="checkClickPic">
                 <img
                     src="@/assets/imgs/introduce/prof-martin.png"
                     style="box-shadow: -7px -5px 3px rgba(255, 192, 0, 0.4)"
@@ -31,10 +31,9 @@
                     원치 않을 때에도 들려오는 사람들의 속마음에 지칠 대로 지쳐
                     연애는 커녕 친구조차 만들기 꺼려지는 와중, 자신을 마주칠
                     때마다 머릿속이 온통
-                    <a style="color: #ff968f">"엄청 좋아해!"로 가득차는
-                    사람</a>을 만나게 된다.
-                    <a style="color: #ff968f">이 사람</a>이라면 자신도 '평범한
-                    관계'를 이룰 수 있을지도?
+                    <a style="color: #ff968f">"엄청 좋아해!"로 가득차는 사람</a
+                    >을 만나게 된다. <a style="color: #ff968f">이 사람</a>이라면
+                    자신도 '평범한 관계'를 이룰 수 있을지도?
                 </div>
             </div>
         </div>
@@ -54,7 +53,8 @@
                     남몰래 위험한 짓까지 한다는 소문이.<br />
                     <a style="color: #ffc000">이 사람</a>이라면 자신의 인생을 좀
                     특별하게 바꿀 수 있을지도?<br />
-                    그리고 결심하게 된다. <a style="color: #ffc000">이 사람</a>에게 도움이 될 수만
+                    그리고 결심하게 된다.
+                    <a style="color: #ffc000">이 사람</a>에게 도움이 될 수만
                     있다면, 무엇이든 하겠노라고.
                 </div>
             </div>
@@ -70,7 +70,35 @@
 </template>
 
 <script>
+import PWPopup from '@/components/PWPopup.vue';
+import Secret from '@/components/Secret.vue';
+import { mapState } from 'vuex';
+
 export default {
+    components: {
+        PWPopup,
+        Secret,
+    },
+    computed: {
+        ...mapState([
+            'showPwPopup', 'showSecretPopup'
+        ])
+    },
+    data() {
+        return {
+            click: 1,
+        };
+    },
+    methods: {
+        checkClickPic() {
+            if (this.click > 4) {
+                this.$store.state.showPwPopup = true;
+                this.click = 1;
+            } else {
+                this.click += 1;
+            }
+        },
+    },
 };
 </script>
 

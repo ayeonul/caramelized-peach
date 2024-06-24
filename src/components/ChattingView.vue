@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-chatviewer no-select custom-scrollbar" @wheel="handleScroll">
+    <div class="bg-chatviewer" @wheel="handleScroll">
         <Chat
             v-for="(chat, idx) in chatData.slice()"
             :chat="chat"
