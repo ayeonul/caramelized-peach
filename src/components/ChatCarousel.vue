@@ -32,8 +32,9 @@ export default {
     data() {
         return {
             swiperOption: {
-              centeredSlides: true,
-              spaceBetween: 30,
+                loop: true,
+                centeredSlides: true,
+                spaceBetween: 30,
                 pagination: {
                     el: '.swiper-pagination',
                     type: 'fraction',
@@ -50,27 +51,28 @@ export default {
 
 <style scoped>
 .swiper-wrapper {
-  position: relative;
+    position: relative;
 }
 
 .swiper {
-  padding-bottom: 50px; 
+    padding-bottom: 50px;
 }
 
 .swiper-pagination {
-  position: absolute;
-  bottom: 10px; /* Adjust this value to position the pagination */
-  width: 100%;
-  text-align: center;
-  font-size: .8rem;
+    position: absolute;
+    bottom: 10px; /* Adjust this value to position the pagination */
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
 }
 
-.swiper-button-next::after, .swiper-button-prev::after{
-  font-size: 25px;
-  color: #fff;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 25px;
+    color: #fff;
 
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 6px 12px;
-  border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 50%;
 }
 </style>
