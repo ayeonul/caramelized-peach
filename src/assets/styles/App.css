@@ -21,18 +21,20 @@ p {
     user-select: none;
 }
 
-#app{
+#app {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.route-view{
+.route-view {
     width: 85%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
 }
+
+
 
 @font-face {
     font-family: 'garam lotus';
@@ -52,14 +54,14 @@ p {
 @font-face {
     font-family: 'palatino';
     font-weight: 400;
-	font-display: swap;
+    font-display: swap;
     src: url("../fonts/palatinolinotype_roman.ttf");
 }
 
 @font-face {
     font-family: 'palatino';
     font-weight: 600;
-	font-display: swap;
+    font-display: swap;
     src: url("../fonts/palatinolinotype_bold.ttf");
 }
 
@@ -67,7 +69,7 @@ p {
     font-family: 'palatino';
     font-weight: 400;
     font-style: italic;
-	font-display: swap;
+    font-display: swap;
     src: url("../fonts/palatinolinotype_italic.ttf");
 }
 
@@ -75,6 +77,6 @@ p {
     font-family: 'palatino';
     font-weight: 600;
     font-style: italic;
-	font-display: swap;
+    font-display: swap;
     src: url("../fonts/palatinolinotype_bolditalic.ttf");
 }

@@ -1,134 +1,156 @@
 <template>
-    <div class="bg-chat">
-        <template v-for="(chat, idx) in chatData">
+    <div
+        v-if="chat.speaker === 'narration'"
+        :key="chatViewerIndex + '-' + chatIndex"
+        class="chat-section"
+    >
+        <div class="chat-narration">
+            {{ chat.contents[0] }}
+        </div>
+    </div>
+    <div
+        v-else-if="chat.speaker === 'martin'"
+        :key="chatViewerIndex + '-' + chatIndex"
+        class="chat-section martin"
+    >
+        <div class="chat-profile-img">{{ chat.face }}</div>
+
+        <div class="chat-contents">
+            <div class="chat-profile-name">Martin</div>
             <div
-                v-if="chat.speaker === 'narration'"
-                :key="chatIndex + '-' + idx"
-                class="chat-section"
-            >
-                <div class="chat-narration">
-                    {{ chat.contents[0] }}
-                </div>
-            </div>
+                v-for="(c, i) in chat.contents"
+                :key="chatViewerIndex + '-' + chatIndex + '-' + i"
+                v-html="formatText(c)"
+                class="chat-texts"
+            ></div>
+        </div>
+    </div>
+    <div
+        v-else-if="chat.speaker === 'alley'"
+        :key="chatViewerIndex + '-' + chatIndex"
+        class="chat-section alley"
+    >
+        <div class="chat-profile-img">{{ chat.face }}</div>
+
+        <div class="chat-contents">
+            <div class="chat-profile-name">Alley</div>
             <div
-                v-else-if="chat.speaker === 'martin'"
-                :key="chatIndex + '-' + idx"
-                class="chat-section"
-            >
-                <div class="chat-profile martin">
-                    <span class="chat-profile-img">{{ chat.face }}</span>
-                    <span class="chat-profile-name">Martin</span>
-                </div>
-                <div
-                    v-for="(c, i) in chat.contents"
-                    :key="chatIndex + '-' + idx + '-' + i"
-                    class="chat-contents martin"
-                >
-                    {{ c }}
-                </div>
-            </div>
-            <div
-                v-else-if="chat.speaker === 'alley'"
-                :key="chatIndex + '-' + idx"
-                class="chat-section"
-            >
-                <div class="chat-profile alley">
-                    <span class="chat-profile-name">Alley</span>
-                    <span class="chat-profile-img">{{ chat.face }}</span>
-                </div>
-                <div
-                    v-for="(c, i) in chat.contents"
-                    :key="chatIndex + '-' + idx + '-' + i"
-                    class="chat-contents alley"
-                >
-                    {{ c }}
-                </div>
-            </div>
-        </template>
+                v-for="(c, i) in chat.contents"
+                :key="chatViewerIndex + '-' + chatIndex + '-' + i"
+                v-html="formatText(c)"
+                class="chat-texts"
+            ></div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    // props:{
-    //     chatData:{ // 한 대화 묶음씩
-    //         type: Array,
-    //         required:true
-    //     },
-    //     chatIndex:{
-    //         type: Number,
-    //         required:true
-    //     }
-    // },
-    data() {
-        return {
-            chatIndex: 0,
-            chatData: [
-                {
-                    speaker: 'narration',
-                    face: '',
-                    contents: [
-                        '서로 궁금했던 점에 대해 질답타임을 갖기로 한다.',
-                    ],
-                },
-                {
-                    speaker: 'martin',
-                    face: 'smile',
-                    contents: [
-                        '음... 저를 좋아하는 이유가 궁금해요.',
-                        '다들 한번씩 그런 생각 하지 않나요? 이 사람이 날 좋아하는 이유가 뭘까, 하고.',
-                        '당신은 어떤 이유인지 궁금해요.',
-                    ],
-                },
-                {
-                    speaker: 'alley',
-                    face: 'smug',
-                    contents: [
-                        '... 너무 많은데... *(장난기 가득한 표정!)* 시험 끝나고 프리젠테이션 준비해올까요?',
-                    ],
-                },
-                {
-                    speaker: 'alley',
-                    face: 'smile',
-                    contents: [
-                        '으음, 일단 몇 개만 꼽아보자면...',
-                        '당신 목소리 처음 듣고 반했다고 하면 믿을... 래요?',
-                    ],
-                },
-            ],
-        };
+    props: {
+        chat: {
+            type: Object,
+            required: true,
+        },
+        chatViewerIndex: {
+            type: Number,
+            required: true,
+        },
+        chatIndex: {
+            type: Number,
+            required: true,
+        },
+    },
+    methods: {
+        formatText(text) {
+            return text.replace(
+                /\*\((.*?)\)\*/g,
+                '<a style="font-style: italic; font-size: 0.7rem; color: #555;">($1)</a>'
+            );
+        },
     },
 };
 </script>
 
 <style scoped>
-.bg-chat {
-    height: fit-content;
-    width: 100%;
-    max-width: 400px;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    background-color: #a3c0bc;
-}
-
 .chat-section {
-    width: calc(100% - 2rem);
+    width: 100%;
     height: fit-content;
-    padding: 1rem;
-    word-break: keep-all; 
+    padding: 0.5rem 0;
     font-family: 'Pretendard';
+    display: flex;
 }
 
-.chat-narration{
+.chat-section.alley {
+    flex-direction: row-reverse;
+}
+
+.chat-narration {
     text-align: center;
-    font-size: .7rem;
+    font-size: 0.7rem;
     font-weight: 300;
     width: fit-content;
     padding: 8px 15px;
-    background-color: rgba(0,0,0,0.5);
-    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 1rem auto 0 auto;
     border-radius: 8px;
     color: #fff;
+    word-break: keep-all;
+}
+
+.chat-profile-img {
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 35px;
+    height: 35px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    display: none;
+}
+
+.martin .chat-profile-img {
+    background-color: #f3cb53;
+}
+
+.alley .chat-profile-img {
+    background-color: #ff968f;
+}
+
+.chat-profile-name {
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+.alley .chat-profile-name {
+    text-align: right;
+}
+
+.chat-contents {
+    word-break: keep-all;
+    width: fit-content;
+    max-width: 70%;
+    min-width: 3rem;
+    margin: 0 0.5rem;
+}
+
+.chat-texts {
+    background-color: #f3fded;
+    margin-top: 0.3rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.alley .chat-texts {
+    background-color: #ffd7d0;
+    /* border: 1.5px solid #ff968f ; */
+}
+
+.martin .chat-texts {
+    background-color: #fde6cc;
+    /* border: 1.5px solid #f3cb53 ; */
 }
 </style>

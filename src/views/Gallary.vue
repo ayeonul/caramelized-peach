@@ -1,13 +1,13 @@
 <template>
     <div>
         <div class="carousel-section">
-            <Carousel :images="images" />
+            <GallaryCarousel :images="images" />
         </div>
     </div>
 </template>
 
 <script>
-import Carousel from '@/components/Carousel.vue';
+import GallaryCarousel from '@/components/GallaryCarousel.vue';
 
 function importAll(r) {
   return r.keys().map(r);
@@ -25,7 +25,7 @@ const images = imageFiles.reduce((acc, img) => {
 
 export default {
     components: {
-        Carousel,
+        GallaryCarousel,
     },
     data() {
         return {
