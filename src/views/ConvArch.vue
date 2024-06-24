@@ -22,7 +22,7 @@ export default {
             const response = await axios.get('/data/data.json');
             this.ChatData = response.data;
         } catch (error) {
-            console.error('Error loading data:', error);
+            console.error('데이터 로딩에 실패했어요. 핑공한테 빨리 문의해줘요!', error);
         }
     },
 };

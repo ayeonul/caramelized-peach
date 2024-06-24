@@ -64,7 +64,7 @@ export default {
         formatText(text) {
             return text.replace(
                 /\*\((.*?)\)\*/g,
-                '<a style="font-style: italic; font-size: 0.7rem; color: #555;">($1)</a>'
+                '<a style="font-size: 0.7rem; color: #555;">($1)</a>'
             );
         },
     },
@@ -105,7 +105,7 @@ export default {
     align-content: center;
     align-items: center;
     text-align: center;
-
+    word-break: break-all;
     display: none;
 }
 
