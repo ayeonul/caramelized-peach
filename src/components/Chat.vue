@@ -14,7 +14,7 @@
         class="chat-section martin"
     >
         <div class="chat-profile-img">
-            <img :src="'/imgs/chat/martin/' + chat.face + '.png'" />
+            <img :src="getChatProfileImg('martin', chat.face)" />
             <!-- {{ chat.face }} -->
         </div>
 
@@ -34,7 +34,7 @@
         class="chat-section alley"
     >
         <div class="chat-profile-img">
-            <img :src="'/imgs/chat/alley/' + chat.face + '.png'" />
+            <img :src="getChatProfileImg('alley', chat.face)" />
             <!-- {{ chat.face }} -->
         </div>
 
@@ -72,6 +72,9 @@ export default {
                 /\*\((.*?)\)\*/g,
                 '<a style="font-size: 0.7rem; color: #555;">($1)</a>'
             );
+        },
+        getChatProfileImg(target, face) {
+            return require(`@/assets/imgs/chat/${target}/${face}.png`);
         },
     },
 };
