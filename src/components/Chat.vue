@@ -13,7 +13,10 @@
         :key="chatViewerIndex + '-' + chatIndex"
         class="chat-section martin"
     >
-        <div class="chat-profile-img">{{ chat.face }}</div>
+        <div class="chat-profile-img">
+            <img :src="'/imgs/chat/martin/' + chat.face + '.png'" />
+            <!-- {{ chat.face }} -->
+        </div>
 
         <div class="chat-contents">
             <div class="chat-profile-name">Martin</div>
@@ -30,7 +33,10 @@
         :key="chatViewerIndex + '-' + chatIndex"
         class="chat-section alley"
     >
-        <div class="chat-profile-img">{{ chat.face }}</div>
+        <div class="chat-profile-img">
+            <img :src="'/imgs/chat/alley/' + chat.face + '.png'" />
+            <!-- {{ chat.face }} -->
+        </div>
 
         <div class="chat-contents">
             <div class="chat-profile-name">Alley</div>
@@ -72,5 +78,5 @@ export default {
 </script>
 
 <style scoped>
-@import url("@/assets/styles/Chat.css");
+@import url('@/assets/styles/Chat.css');
 </style>

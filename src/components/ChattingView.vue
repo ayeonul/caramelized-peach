@@ -54,8 +54,8 @@ export default {
 <style scoped>
 .bg-chatviewer {
     margin: 0 auto;
-    width: calc(100% - 2rem);
-    padding: 0 1rem;
+    width: calc(100% - 1rem);
+    padding: 0 0.5rem;
     max-width: 400px;
     height: 600px;
     display: flex;
