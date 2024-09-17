@@ -39,15 +39,15 @@
 .logo-item {
   text-align: center;
   /* font-family: "Old London"; */
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 600;
   font-size: 4rem;
   color: #472d2d;
 }
 
-.info-section{
+.info-section {
   width: 100%;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 600;
   color: #472d2d;
   border-top: 1px solid #472d2d;
@@ -83,4 +83,23 @@
   /* color: #f3cb53; */
   background-color: #472d2d;
   color: #fff;
+}
+
+@media (max-width: 900px) {
+  .logo-item {
+    font-size: 3rem;
+  }
+  .info-section {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo-item {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+  .info-section {
+    font-size: 0.7rem;
+  }
 }
