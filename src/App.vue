@@ -13,8 +13,8 @@
       </div>
       <Header ref="header" v-show="isRoute" />
       <router-view :class="{ 'route-view no-scrollbar': isRoute }" />
-      <!-- <div class="spacer" v-show="isRoute && isNotIntroduce"></div> -->
-      <Footer ref="footer" v-show="isRoute" />
+      <div class="spacer" v-show="isRoute "></div>
+      <!-- <Footer ref="footer" v-show="isRoute" /> -->
     </div>
   </div>
 </template>

@@ -1,9 +1,52 @@
+.subtitle-section {
+  font-size: 2.3rem;
+  font-family: "Pretendard";
+  font-weight: 700;
+  word-break: keep-all;
+  min-height: 6rem;
+  color: rgb(71, 45, 45);
+}
+
 .profile {
   display: flex;
   flex-direction: row;
   font-family: "Pretendard";
   position: relative;
   /* Ensure that position context is set */
+}
+
+.highlight-text {
+  /* background: linear-gradient(to top, rgba(255, 255, 0, 0.5) 50%, transparent 50%); */
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: relative;
+}
+
+.highlight-text::before {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  height: 70%;
+  /* background-color: rgba(255, 255, 0, 0.5); */
+  z-index: -1;
+}
+
+.highlight-text.yellow {
+  background: linear-gradient(
+    to top,
+    rgba(255, 192, 0, 0.5) 70%,
+    transparent 70%
+  );
+}
+
+.highlight-text.pink {
+  background: linear-gradient(
+    to top,
+    rgba(255, 150, 143, 0.5) 70%,
+    transparent 70%
+  );
 }
 
 .profile-pic {
@@ -57,15 +100,29 @@
   font-family: "RadiantlySignature";
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffc000;
+  /* color: #ffc000; */
+  background: linear-gradient(
+    to top,
+    rgba(255, 192, 0, 0.5) 50%,
+    transparent 50%
+  ) ;
+  background-repeat: no-repeat;
+  background-size: 100% 90%; /* 배경 크기 조정 */
+  background-position: 0 35%;
 }
+
 
 .eng-name.alley {
   font-size: 3rem;
   font-family: "garam lotus";
   font-weight: bold;
-  color: #ff968f;
+  /* color: #ff968f; */
   padding: 0.7rem 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 150, 143, 0.5) 50%,
+    transparent 50%
+  );
 }
 
 .kor-name {
@@ -96,7 +153,7 @@
 /* @media */
 @media (max-width: 900px) {
   .profile.alley {
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
   }
 
   .profile-pic img {
@@ -135,9 +192,17 @@
 }
 
 @media (max-width: 768px) {
+  .subtitle-section{
+    font-size: 2.2rem;
+  }
+
   .profile {
     flex-direction: column;
     align-items: center;
+  }
+
+  .profile.alley {
+    flex-direction: column-reverse;
   }
 
   .profile-text {
@@ -152,6 +217,10 @@
 }
 
 @media (max-width: 500px) {
+  .subtitle-section{
+    font-size: 1.8rem;
+  }
+
   .eng-name.martin {
     font-size: 1rem;
     margin-bottom: 0.3rem;

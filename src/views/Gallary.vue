@@ -61,13 +61,13 @@ export default {
     font-family: 'pretendard';
     text-align: center;
     font-size: 0.9rem;
-    color: #888;
+    color: rgba(71, 45, 45, .8);
 }
 .toggle-section {
     font-family: 'pretendard';
     font-size: 0.8rem;
     font-weight: 500;
-    color: #888;
+    color: rgba(71, 45, 45, .8);
     align-content: center;
     text-align: center;
 }

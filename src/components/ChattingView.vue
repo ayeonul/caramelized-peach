@@ -57,7 +57,7 @@ export default {
   width: calc(100% - 1rem);
   padding: 0 0.5rem;
   max-width: 400px;
-  height: 600px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   background-color: #a3c0bc;
