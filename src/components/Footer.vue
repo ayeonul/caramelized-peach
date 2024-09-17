@@ -1,23 +1,25 @@
 <template>
-  <div class="footer-wave-gradient"></div>
+  <!-- <div class="footer-wave-gradient"></div> -->
+  <div class="footer-static"></div>
 </template>
 
 <script>
 export default {
-    mounted() {
-        this.startAnimation();
-    },
-    methods: {
-        startAnimation() {
-            const wave = document.querySelector('.footer-wave-gradient');
-            wave.style.animation = 'gradientWave 7s infinite';
-        },
-    },
+  // mounted() {
+  //     this.startAnimation();
+  // },
+  // methods: {
+  //     startAnimation() {
+  //         const wave = document.querySelector('.footer-wave-gradient');
+  //         wave.style.animation = 'gradientWave 7s infinite';
+  //     },
+  // },
 };
 </script>
 
 <style scoped>
-@keyframes gradientWave {
+@import url("@/assets/styles/Footer.css");
+/* @keyframes gradientWave {
     0% {
         background-position: 30% 50%;
     }
@@ -53,5 +55,5 @@ export default {
     mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 0 C 25 100 75 0 100 100 L 100 0 Z" /></svg>');
     mask-size: cover;
     animation: gradientWave 7s infinite;
-}
+} */
 </style>

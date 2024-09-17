@@ -1,162 +1,162 @@
 .profile {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Pretendard';
-    position: relative;
-    /* Ensure that position context is set */
+  display: flex;
+  flex-direction: row;
+  font-family: "Pretendard";
+  position: relative;
+  /* Ensure that position context is set */
 }
 
 .profile-pic {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
 }
 
 .profile-pic img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .profile-pic-caption {
-    font-size: 0.8rem;
-    text-align: center;
-    color: #666;
-    padding-top: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #666;
+  padding-top: 0.5rem;
 }
 
 .profile-text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 30px;
-    flex-grow: 1;
-    word-break: keep-all;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  flex-grow: 1;
+  word-break: keep-all;
 }
 
 .profile-text.martin {
-    padding-left: 30px
+  padding-left: 15px;
 }
 
 .profile-text.alley {
-    align-items: flex-end;
-    padding-right: 30px
+  align-items: flex-end;
+  padding-right: 30px;
 }
 
 .name-section {
-    display: flex;
-    height: fit-content;
-    align-items: flex-end;
+  display: flex;
+  height: fit-content;
+  align-items: flex-end;
 }
 
 .eng-name {
-    height: fit-content;
+  height: fit-content;
 }
 
 .eng-name.martin {
-    font-family: 'RadiantlySignature';
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffc000;
+  font-family: "RadiantlySignature";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffc000;
 }
 
 .eng-name.alley {
-    font-size: 3rem;
-    font-family: 'garam lotus';
-    font-weight: bold;
-    color: #ff968f;
-    padding: 0.7rem 0;
+  font-size: 3rem;
+  font-family: "garam lotus";
+  font-weight: bold;
+  color: #ff968f;
+  padding: 0.7rem 0;
 }
 
 .kor-name {
-    height: fit-content;
-    font-weight: 600;
+  height: fit-content;
+  font-weight: 600;
 }
 
 .bio {
-    padding-bottom: 0.5rem;
-    font-weight: 500;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .bio.martin {
-    margin-top: -0.5rem
+  margin-top: -0.5rem;
 }
 
 .desc {
-    font-size: 0.9rem;
-    width: calc(100% - 30px);
+  font-size: 0.9rem;
+  width: calc(100% - 30px);
 
-    line-height: 1.2rem;
+  line-height: 1.2rem;
 }
 
 .desc.alley {
-    text-align: right
+  text-align: right;
 }
 
 /* @media */
 @media (max-width: 900px) {
-    .profile.alley {
-        flex-direction: column-reverse;
-    }
+  .profile.alley {
+    flex-direction: column-reverse;
+  }
 
-    .profile-pic img {
-        width: 150px;
-        height: 150px;
-        margin-top: 2rem;
-    }
+  .profile-pic img {
+    width: 150px;
+    height: 150px;
+    margin-top: 2rem;
+  }
 
-    .name-section.alley {
-        flex-direction: row-reverse;
-        margin-right: auto;
-    }
+  .name-section.alley {
+    flex-direction: row-reverse;
+    margin-right: auto;
+  }
 
-    .profile-text {
-        display: flex;
-        flex-direction: column;
-        width: calc(100% - 180px);
-    }
+  .profile-text {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 180px);
+  }
 
-    .profile-text.martin {
-        padding: 0;
-    }
+  .profile-text.martin {
+    padding: 0;
+  }
 
-    .profile-text.alley {
-        padding: 0;
-        align-items: unset
-    }
+  .profile-text.alley {
+    padding: 0;
+    align-items: unset;
+  }
 
-    .desc {
-        width: 100%;
-    }
+  .desc {
+    width: 100%;
+  }
 
-    .desc.alley {
-        text-align: unset;
-    }
+  .desc.alley {
+    text-align: unset;
+  }
 }
 
 @media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        align-items: center;
-    }
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .profile-text {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 1rem;
-    }
+  .profile-text {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
 
-    .desc {
-        width: 100%;
-    }
+  .desc {
+    width: 100%;
+  }
 }
 
-@media (max-width: 500px){
-    .eng-name.martin{
-        font-size: 1rem;
-        margin-bottom: .3rem;
-    }
-    .eng-name.alley{
-        font-size: 2rem;
-    }
+@media (max-width: 500px) {
+  .eng-name.martin {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  .eng-name.alley {
+    font-size: 2rem;
+  }
 }

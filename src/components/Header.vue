@@ -1,5 +1,5 @@
 <template>
-    <div class="header route-view">
+    <div class="header">
         <router-link to="/" class="logo-section">
             <div class="logo-item">Caramelized</div>
             <div class="logo-item">Peach</div>

@@ -7,6 +7,8 @@
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
+  flex-shrink: 0;
+  background-color: #ba9898;
 }
 
 .logo-section {
@@ -23,7 +25,7 @@
 
 .logo-item {
   text-align: center;
-  font-family: 'Sophia Martini';
+  font-family: "Sophia Martini";
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -33,7 +35,7 @@
 }
 
 .nav {
-  font-family: 'Palatino Linotype';
+  font-family: "Palatino Linotype";
   font-style: italic;
   display: flex;
   justify-content: space-between;
@@ -46,7 +48,7 @@
   flex: 1;
   cursor: pointer;
   text-align: center;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s ease-in-out;
 }

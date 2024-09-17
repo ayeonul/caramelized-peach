@@ -1,142 +1,264 @@
 body,
 p {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 :visited {
-    color: inherit;
+  color: inherit;
 }
 
 :link {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .no-select {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
 }
+
+@keyframes gradientWave {
+  0% {
+    background-position: 30% 50%;
+  }
+
+  50% {
+    background-position: 70% 50%;
+  }
+
+  100% {
+    background-position: 30% 50%;
+  }
+}
+
+.wave-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(60deg, #cea346 30%, #ff968f 70%);
+  background-size: 200% 200%;
+}
+
+.wave-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 0 C 25 100 75 0 100 100 L 100 0 Z" /></svg>');
+  mask-size: cover;
+  animation: gradientWave 7s infinite;
+}
+
+.dark-veil {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.content-container {
+  margin: 8rem auto 0 auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 85%;
+  height: 100%;
+  max-width: 1000px;
+  position: relative;
+  /* min-height: 100%; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.spacer {
+  flex-grow: 1;
+  width: calc(100% - 4rem);
+  padding: 0 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ba9898;
+}
+
+.papers {
+  width: 100%;
+  z-index: -1;
+}
+
+.stacked-paper {
+  width: 85%;
+  height: 100vh;
+  position: absolute;
+  background-color: #76424a;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.paper-1 {
+  top: -1rem;
+  left: -1rem;
+  transform: rotate(-3deg);
+}
+
+.paper-2 {
+  top: -2rem;
+  left: -2rem;
+  transform: rotate(-6deg);
+}
+
+
 
 .route-view {
-    width: 85%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
+  margin: 0 auto;
+  overflow-y: auto;
+  background-color: #ba9898;
+  width: calc(100% - 6rem);
+  padding: 2rem 3rem;
+  height: calc(100% - 20rem);
 }
 
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
 input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-input[type="checkbox"]+label {
-    position: relative;
-    padding-left: 25px;
-    cursor: pointer;
-    display: inline-block;
-    user-select: none;
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
 }
 
-input[type="checkbox"]:checked+label::before {
-    background-color: #ff968f;
-    border-color: #ff968f;
+input[type="checkbox"]:checked + label::before {
+  background-color: #ff968f;
+  border-color: #ff968f;
 }
 
-input[type="checkbox"]+label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
-input[type="checkbox"]:checked+label::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 .checkbox-label {
-    margin-left: 0.3rem;
+  margin-left: 0.3rem;
 }
 
 .bg-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.6);
-    z-index: 99;
-    display: flex;
-    align-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 99;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    margin: 5rem auto 0 auto;
+    padding: 0;
+  }
+  .route-view{
+    width: calc(100% - 4rem);
+    padding: 1rem 2rem;
+  }
 }
 
 
 @font-face {
-    font-family: 'garam lotus';
-    src: url("../fonts/나눔손글씨\ 가람연꽃.ttf");
+  font-family: "garam lotus";
+  src: url("../fonts/나눔손글씨\ 가람연꽃.ttf");
 }
 
 @font-face {
-    font-family: 'RadiantlySignature';
-    src: url("../fonts/RadiantlySignature.otf");
+  font-family: "RadiantlySignature";
+  src: url("../fonts/RadiantlySignature.otf");
 }
 
 @font-face {
-    font-family: 'sophia martini';
-    src: url("../fonts/Sophia\ Martini.otf");
+  font-family: "sophia martini";
+  src: url("../fonts/Sophia\ Martini.otf");
 }
 
 @font-face {
-    font-family: 'palatino';
-    font-weight: 400;
-    font-display: swap;
-    src: url("../fonts/palatinolinotype_roman.ttf");
+  font-family: "palatino";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/palatinolinotype_roman.ttf");
 }
 
 @font-face {
-    font-family: 'palatino';
-    font-weight: 600;
-    font-display: swap;
-    src: url("../fonts/palatinolinotype_bold.ttf");
+  font-family: "palatino";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/palatinolinotype_bold.ttf");
 }
 
 @font-face {
-    font-family: 'palatino';
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-    src: url("../fonts/palatinolinotype_italic.ttf");
+  font-family: "palatino";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("../fonts/palatinolinotype_italic.ttf");
 }
 
 @font-face {
-    font-family: 'palatino';
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-    src: url("../fonts/palatinolinotype_bolditalic.ttf");
+  font-family: "palatino";
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("../fonts/palatinolinotype_bolditalic.ttf");
 }
