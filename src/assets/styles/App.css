@@ -100,7 +100,7 @@ p {
   padding: 0 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #ba9898;
+  background-color: rgb(204, 174, 166);
 }
 
 .papers {
@@ -112,7 +112,7 @@ p {
   width: 85%;
   height: 100vh;
   position: absolute;
-  background-color: #76424a;
+  background-color: #472d2d;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   margin: 0 auto;
@@ -135,7 +135,7 @@ p {
 .route-view {
   margin: 0 auto;
   overflow-y: auto;
-  background-color: #ba9898;
+  background-color: rgb(204, 174, 166);
   width: calc(100% - 6rem);
   padding: 2rem 3rem;
   height: calc(100% - 20rem);
@@ -231,6 +231,21 @@ input[type="checkbox"]:checked + label::after {
 @font-face {
   font-family: "sophia martini";
   src: url("../fonts/Sophia\ Martini.otf");
+}
+
+@font-face {
+  font-family: "funflow survivor KR";
+  src: url("../fonts/FUNFLOW\ SURVIVOR_KR.ttf");
+}
+
+@font-face {
+  font-family: "funflow survivor";
+  src: url("../fonts/FUNFLOW\ SURVIVOR.ttf");
+}
+
+@font-face {
+  font-family: "Old London";
+  src: url("../fonts/OldLondon.ttf");
 }
 
 @font-face {

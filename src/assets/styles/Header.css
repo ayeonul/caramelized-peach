@@ -8,7 +8,9 @@
   align-items: center;
   padding-top: 1rem;
   flex-shrink: 0;
-  background-color: #ba9898;
+  background-color: rgb(204, 174, 166);
+
+  border-bottom: 3px solid #472d2d;
 }
 
 .logo-section {
@@ -16,22 +18,41 @@
   width: fit-content;
   height: fit-content;
   flex-direction: column;
-  background: linear-gradient(55deg, #f3cb53 45%, #ff968f 55%) !important;
+  /* background: linear-gradient(55deg, #f3cb53 45%, #ff968f 55%) !important;
   -webkit-background-clip: text !important;
-  background-clip: text !important;
+  background-clip: text !important; */
   color: transparent !important;
   cursor: pointer !important;
 }
 
-.logo-item {
+/* .logo-item {
   text-align: center;
   font-family: "Sophia Martini";
   font-weight: bold;
   font-size: 1.5rem;
+} */
+
+/* .logo-item:nth-child(2) {
+  margin-top: -1rem;
+} */
+
+.logo-item {
+  text-align: center;
+  /* font-family: "Old London"; */
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 4rem;
+  color: #472d2d;
 }
 
-.logo-item:nth-child(2) {
-  margin-top: -1rem;
+.info-section{
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color: #472d2d;
+  border-top: 1px solid #472d2d;
+  border-bottom: 1px solid #472d2d;
+  text-align: center;
 }
 
 .nav {
@@ -42,6 +63,7 @@
   flex-direction: row;
   width: 100%;
   font-weight: bold;
+  color: #472d2d;
 }
 
 .nav-item {
@@ -53,29 +75,12 @@
   transition: color 0.3s ease-in-out;
 }
 
-.nav-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 150, 143, 0.5);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease-in-out;
-  z-index: -1;
-}
-
-.nav-item:hover:not(.is-active)::before {
-  transform: scaleX(1);
-}
-
 .nav-item:hover:not(.is-active) {
   color: #fff;
 }
 
 .nav-item.is-active {
-  border-bottom: rgba(255, 150, 143, 0.5) 2px solid;
-  color: #f3cb53;
+  /* color: #f3cb53; */
+  background-color: #472d2d;
+  color: #fff;
 }
