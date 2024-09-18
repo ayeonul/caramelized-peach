@@ -48,7 +48,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -3;
+  z-index: -4;
   width: 100%;
   height: 100vh;
   background: linear-gradient(60deg, #cea346 30%, #ff968f 70%);
@@ -75,7 +75,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -2;
+  z-index: -3;
 }
 
 .content-container {
@@ -92,8 +92,6 @@ p {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-
-
 .spacer {
   flex-grow: 1;
   width: calc(100% - 4rem);
@@ -106,6 +104,56 @@ p {
 .papers {
   width: 100%;
   z-index: -1;
+}
+
+.backgroud-papers{
+  z-index: -2;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  top: 40%;
+}
+
+.bg-paper{
+  background-color: #6b5656;
+  opacity: 0.4;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  width: 35rem;
+}
+
+.bg-paper-1{
+  transform: rotate(-10deg);
+  left: -5rem;
+  top: -5rem;
+}
+
+.bg-paper-2{
+  transform: rotate(260deg);
+  left: -20rem;
+}
+
+.bg-paper-3{
+  transform: rotate(20deg);
+  left: -40rem;
+  top: -3rem;
+}
+
+.bg-paper-4{
+  transform: rotate(3deg);
+  left: -50rem;
+  top: 8rem;
+}
+
+.bg-paper-5{
+  transform: rotate(-10deg);
+  left: -65rem;
+  top: -5rem;
+}
+
+.bg-paper-6{
+  transform: rotate(15deg);
+  left: -75rem;
 }
 
 .stacked-paper {
@@ -205,6 +253,7 @@ input[type="checkbox"]:checked + label::after {
   align-content: center;
   align-items: center;
 }
+
 
 @media (max-width: 768px) {
   .content-container {
