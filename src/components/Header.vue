@@ -25,7 +25,7 @@
         class="nav-item long-item"
         @click="
           openSite(
-            'https://www.notion.so/Caramelized-Peach-1057274502d0809689d2d2ad0f56400f?pvs=4'
+            'https://amused-letter-39e.notion.site/Caramelized-Peach-1057274502d0809689d2d2ad0f56400f?pvs=74'
           )
         "
         >Develop-Note<unicon name="link" width="15" height="15" class="icon" />

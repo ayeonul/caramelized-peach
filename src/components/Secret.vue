@@ -1,101 +1,97 @@
 <template>
-    <div class="bg-popup">
-        <div class="bg-letter">
-            <div class="heart-secton" @click="closeLetter">
-                <div class="heart"  />
-            </div>
-
-            <div class="letter" @scroll="handleScroll">
-                <p>
-                    안녕, 안녕! 자기가 이 편지를 읽고 있다는 건, 내가 이 웹의
-                    개발을 완료하고 당신한테 전달했단 뜻이겠네요!
-                </p>
-                <p>
-                    이 웹사이트는... 안에 삽입된 그림들 빼고<a class="note"
-                        >-사실 그림들 마저도 대부분이 값을 지불한
-                        커미션들이지만-</a
-                    >
-                    모든 것이 내 손으로 디자인되고 개발되었어요. 봤을지
-                    모르겠지만, 아카이브 페이지의 우리 대화 내역까지 내가 손수
-                    다 타이핑했죠.
-                </p>
-                <p>
-                    <img src="@/assets/imgs/letter/letter1.png" />
-                    <a class="note"
-                        >잘 보이려나. 파이썬으로 대충 계산해봤더니, 대화 세트 총
-                        38개, 대화 로그(채팅 개수) 총 283개, 글자 수 총 17982자!
-                        라네요.</a
-                    >
-                </p>
-                <p>
-                    짠, 나 엄청 힘들었다구요. 이 작업 덕분에 개발이 나흘은 더
-                    미뤄진 거 같아요.
-                </p>
-                <p>
-                    사실 언젠가 한 번은 꼭 이렇게 웹사이트를 만들어서 보여주고
-                    싶었어요. 그런데 이때까진 회사 때문에 영 짬도 체력도 안
-                    되다가, 퇴사하고 나니 슬슬 코딩이 하고싶어서 근질근질한 거
-                    있죠. <a class="note">(세상에나!)</a> 그래서 오랜만에 머리도
-                    풀 겸 이렇게 웹을 만들고... 배포도 처음 해보고... 응,
-                    해봤답니다!
-                </p>
-                <p>
-                    어디 보자, 만드는 기간이 총... 열흘 정도 걸린 거 같은데, 이
-                    열흘 동안 되게 즐거웠어요. 소개 페이지의 우리 이름을 적을
-                    폰트를 고르는 것도, 들어오자마자 보이는 인트로 페이지의
-                    디자인을 고민하는 것도, 이렇게 당신한테만 보여줄 편지를 숨길
-                    공간을 생각하는 것도, 하다 못해 복잡한 코드 구조를 어떻게
-                    다듬을지 생각하는 것조차도! 이 사이트를 보고 놀라면서 좋아할
-                    당신을 생각하니까 정말 즐겁지 않은 작업이 없었어요.
-                    <a class="note" style="text-decoration: line-through"
-                        >사실, 대화 내역을 손으로 옮기는 작업은 좀... 아니 많이
-                        덜 즐겁긴 했어요...</a
-                    >
-                </p>
-                <p>
-                    말이 나와서 말인데, 시간이 되면... 여길 본 소감... 이라고
-                    해야 할지. 보고 나서 어땠는지 알고 싶어요. 솔직히 아마추어가
-                    만든, 몇 페이지 안 되는 사이트긴 하지만... 그래도, 그래도!
-                    프로그래밍이라는 전공을 살리고 싶어서, 또 그... 애정을 좀 더
-                    담고 싶어서! 쉽게 웹 만들어주는<a class="note"
-                        >(유명한 게 뭐가 있지, wix나 modoo 같은 거?)</a
-                    >
-                    도구는 버리고 오로지 내 힘으로 시행착오를 거쳐가며 만든
-                    거거든요. 그래서 더욱이, 당신이 어떤 반응을 보일지 궁금해요.
-                    이왕이면 마구 칭찬해줘요!
-                </p>
-                <p>
-                    어제도, 오늘도, 내일도, 모레도! 많이 사랑해요🩷 이 편지지는 맨 위의 하트를 누르면 닫을 수 있으니까, 이제 편지지 닫고 다른 페이지들 감상해줘요!
-                </p>
-                <p class="note">p.s. 한 달 쯤 뒤에, archive 페이지를 살짝 업데이트 할 거예요! 하고 나서 알려줄 테니 기다려줘요!</p>
-                <p class="letter-sign">From. your PINK</p>
-            </div>
+  <div class="bg-popup">
+    <div class="bg-letter">
+      <div class="heart-secton" @click="closeLetter">
+        <div>
+          <unicon
+            name="envelope-heart"
+            fill="rgb(71, 45, 45)"
+            width="60"
+            height="60"
+          />
         </div>
+      </div>
+
+      <div class="letter" @scroll="handleScroll">
+        <p>
+          안녕, 내 사랑! 사흘 전인가, 샤워하다 문득 이 사이트를 리디자인 하고
+          싶단 생각이 드는 거예요. 뭔가... 이전 페이지는 너무 밋밋하단 생각이
+          들었거든요.
+        </p>
+        <p>
+          사실 내가 잘하고 좋아하는 건 "있는 요소를 배치해서 꾸미는" 류의, 편집
+          디자인이라... 이렇게 처음부터 창작하는 건 영 소질이 없단 말이죠.
+          그래서 어디 웹 디자인 잘 하는 사람한테 돈을 주고 디자인만 맡길까
+          싶다가도... 왠지, 왠지 이 사이트만큼은 A to Z 전부 내가 해야만 할 것
+          같은 책임감도 생겨버린 데다, 솔직히... 누구한테 맡겨서 얼마를
+          줘야할지도 모르구요🫠
+        </p>
+        <p>
+          결국 큰 변화는 못 준 채로... 컨셉만 약간 바꾼 게 된 것 같지만. 뭐,
+          일단 여기서 만족하기로 했어요. 좀 더 세련된 느낌을 주고는 싶었는데...
+          아, 역시 좀 아쉽죠? 이상하지, 볼 수록 정이 들어야 하는데 볼수록 아쉽단
+          말이에요.
+        </p>
+        <p>
+          으으음, 뭐, 여하튼! 이번 디자인의 컨셉은, 보다시피 리버포드의 신문
+          1면에 실린 우리예요! 당신이랑 연애한다고 하면 1면에 실릴 만하지, 그럼.
+          그으으리고 약간의 앤티크함이려나. (사실 원래 앤티크가 주 컨셉이었는데,
+          내 실력으론 도저히 살리기 힘들어서...)
+        </p>
+        <p>
+          언젠가 기회가 되면, 우리를 컨셉으로 한 노래를 만들어서 이 페이지에
+          넣고 싶어요. 플레이어 디자인 구상도 해놨는데. 오른쪽 위 상단에 축음기
+          이미지를 넣고, 재생 버튼을 클릭하면 레코드만 빙글빙글 돌도록... 으음,
+          내가 음악에 조금이라도 조예가 있었다면 좋았을 텐데 말이에요. 누구한테
+          작곡을 부탁하려 해도 내가 음악에 영 관심이 없으니...
+        </p>
+        <p>
+          아, 이번에 리디자인하는 김에, 개발 과정을(빙자한 울부짖음 내역) 외부
+          링크로 추가했어요. 별 거 없는 내용에, 그저 반복해서 이거 왜 안돼! 아니
+          이거 어떻게 하는데! 의 연속이긴 하지만, 내가 이런 역경을 이겨내고 이런
+          걸 만들었구나! 하는 그런 느낌으로... 심심풀이로 한번 쯤 봐주면 기쁠 거
+          같아요😉
+        </p>
+        <p>
+          ... 지금 새벽 세 시를 넘겨서 그런가, 점점 언어능력이 퇴화하는 게...
+          느껴지네요. 이 편지의 모든 문단이 두서없이 그저 의식의 흐름대로
+          이어지고 있단 게 느껴져요... 뭐, 평소에도 이런 식으로 편지 썼던 거
+          같지만. 더 헛소리 하기 전에 자러 가야겠다.
+        </p>
+        <p>
+          어제도, 오늘도, 내일도 항상 사랑해요. 이 넓디 넓은 웹의 세계에 당신과
+          내 흔적을 영원히 남겨두고 싶을 만큼 말이에요. (물론, 검색
+          비허용이지만...)
+        </p>
+        <p class="note">P.S. 이번에도, 맨 위의 러브레터를 누르면 편지지를 닫을 수 있어요!</p>
+        <p class="letter-sign">From. your PINK</p>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    methods: {
-        handleScroll(event) {
-            const element = event.currentTarget;
-            const scrollTop = element.scrollTop;
-            const scrollHeight = element.scrollHeight;
-            const offsetHeight = element.offsetHeight;
-            const scrollBottom = scrollHeight - offsetHeight - scrollTop;
+  methods: {
+    handleScroll(event) {
+      const element = event.currentTarget;
+      const scrollTop = element.scrollTop;
+      const scrollHeight = element.scrollHeight;
+      const offsetHeight = element.offsetHeight;
+      const scrollBottom = scrollHeight - offsetHeight - scrollTop;
 
-            if (
-                (scrollTop === 0 && event.deltaY < 0) ||
-                (scrollBottom === 0 && event.deltaY > 0)
-            ) {
-                // 스크롤이 상단이나 하단에 도달하면 부모로 스크롤 이벤트를 전파
-                event.preventDefault();
-            }
-        },
-        closeLetter() {
-            this.$store.state.showSecretPopup = false;
-        },
+      if (
+        (scrollTop === 0 && event.deltaY < 0) ||
+        (scrollBottom === 0 && event.deltaY > 0)
+      ) {
+        // 스크롤이 상단이나 하단에 도달하면 부모로 스크롤 이벤트를 전파
+        event.preventDefault();
+      }
     },
+    closeLetter() {
+      this.$store.state.showSecretPopup = false;
+    },
+  },
 };
 </script>
 
