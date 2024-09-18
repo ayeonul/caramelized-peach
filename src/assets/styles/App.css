@@ -254,6 +254,11 @@ input[type="checkbox"]:checked + label::after {
   align-items: center;
 }
 
+.icon{
+  position: relative;
+  top: 3px;
+  padding: 0 3px;
+}
 
 @media (max-width: 768px) {
   .content-container {

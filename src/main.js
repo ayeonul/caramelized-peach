@@ -3,9 +3,9 @@ import App from './App.vue';
 import store from './store';
 import router from './router';
 import Unicon from 'vue-unicons/dist/vue-unicons-vue2.umd';
-import { uniTimes } from 'vue-unicons/dist/icons';
+import { uniTimes, uniLink } from 'vue-unicons/dist/icons';
 
-Unicon.add([uniTimes]);
+Unicon.add([uniTimes, uniLink]);
 Vue.use(Unicon);
 
 Vue.config.productionTip = false;

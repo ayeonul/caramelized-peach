@@ -21,7 +21,6 @@
   font-family: 'Sophia Martini';
   font-size: 5rem;
   text-align: center;
-  /* font-style: italic; */
   margin: -2rem 0;
 }
 
@@ -32,7 +31,6 @@
   font-style: italic;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   flex-direction: row;
   width: 100%;
 }
@@ -41,9 +39,9 @@
   flex: 1;
   cursor: pointer;
   text-align: center;
-  /* border-bottom: #fff 1px solid; */
   padding: .5rem 0;
   position: relative;
+  white-space: nowrap;
 }
 
 .main-nav-item::after {
@@ -75,7 +73,7 @@
   }
 
   .main-nav {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -86,6 +84,7 @@
   }
 
   .main-nav {
+    font-size: 1.3rem;
     flex-direction: column;
   }
 

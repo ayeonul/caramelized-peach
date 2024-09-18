@@ -10,6 +10,15 @@
         >
         <router-link to="/gallary" class="main-nav-item">Gallary</router-link>
         <router-link to="/archive" class="main-nav-item">Archive</router-link>
+        <span
+          class="main-nav-item"
+          @click="
+            openSite(
+              'https://www.notion.so/Caramelized-Peach-1057274502d0809689d2d2ad0f56400f?pvs=4'
+            )
+          "
+          >Develop-Note<unicon name="link" width="17" height="17" class="icon" fill="#fff"
+        /></span>
       </div>
     </div>
   </div>
@@ -24,6 +33,9 @@ export default {
     startAnimation() {
       const wave = document.querySelector(".wave-gradient");
       wave.style.animation = "gradientWave 7s infinite";
+    },
+    openSite(url) {
+      window.open(url, "_blank");
     },
   },
 };
