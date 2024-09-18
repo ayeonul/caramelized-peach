@@ -41,11 +41,11 @@
           <span class="eng-name alley">Alley Kim</span>
         </div>
         <div class="bio">
-          24세, 여성, 비능력자, 한국 출생, 컴퓨터 프로그래머
+          2<span class="mosaic"> </span>세, 여성, 비능력자, 한국 출생, 컴퓨터 프로그래머
         </div>
         <div class="desc alley">
           평범한 인생, 반복되는 무료한 날들. 이를 타파해보고자 훌쩍 떠나간
-          영국에서 어떤 남성을 마주하고 첫눈에 반하게 된다. 게다가 어찌저찌 알게
+          영국에서 <a class="highlight-text yellow">어떤 남성</a>을 마주하고 첫눈에 반하게 된다. 게다가 어찌저찌 알게
           된 정보로는, 자기가 속한 재단을 위해 남몰래 위험한 짓까지 한다는
           소문이.<br />
           <a class="highlight-text yellow">이 사람</a>이라면 자신의 인생을 좀 특별하게

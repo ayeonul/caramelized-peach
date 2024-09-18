@@ -78,7 +78,7 @@
 }
 
 .profile-text.martin {
-  padding-left: 15px;
+  padding-left: 5px;
 }
 
 .profile-text.alley {
@@ -120,9 +120,12 @@
   padding: 0.7rem 0;
   background: linear-gradient(
     to top,
-    rgba(255, 150, 143, 0.5) 50%,
-    transparent 50%
+    rgba(255, 150, 143, 0.5) 40%,
+    transparent 40%
   );
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* 배경 크기 조정 */
+  background-position: 0 30%;
 }
 
 .kor-name {
@@ -148,6 +151,18 @@
 
 .desc.alley {
   text-align: right;
+}
+
+.mosaic {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 2.5px 2.5px; /* 점 간격 조정 */
+  color: rgba(0,0,0,.8); /* 점 색상 */
+  width: 1rem; /* 영역 너비 */
+  height: 1rem; /* 영역 높이 */
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  top: .2rem;
 }
 
 /* @media */
