@@ -75,6 +75,7 @@
   margin-left: 30px;
   flex-grow: 1;
   word-break: keep-all;
+  color: #472d2d;
 }
 
 .profile-text.martin {

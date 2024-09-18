@@ -3,13 +3,16 @@
     <Secret v-if="showSecretPopup" />
     <PWPopup v-if="showPwPopup" />
 
-    <div class="subtitle-section">[단독] 숭고한 길 재단 마틴 챌피, 열애 인정 "연애 {{getDateDiff()}}일 째... 상대는 비능력자 여성"</div>
+    <div class="subtitle-section">
+      [단독] 숭고한 길 재단 마틴 챌피, 열애 인정 "연애 {{ getDateDiff() }}일
+      째... 상대는 비능력자 여성"
+    </div>
 
     <div class="profile">
       <div class="profile-pic" @click="checkClickPic">
         <img
           src="@/assets/imgs/introduce/prof-martin.png"
-          style="box-shadow: -7px -5px 3px rgba(255, 192, 0, 0.4)"
+          style="box-shadow: -7px -5px 3px rgba(71, 45, 45, 0.4)"
         />
         <div class="profile-pic-caption">cm.@commi_59</div>
       </div>
@@ -28,9 +31,9 @@
           명목 하에 무엇이든 하는 사람. <br />
           원치 않을 때에도 들려오는 사람들의 속마음에 지칠 대로 지쳐 연애는 커녕
           친구조차 만들기 꺼려지는 와중, 자신을 마주칠 때마다 머릿속이 온통
-          <a class="highlight-text pink">"엄청 좋아해!"로 가득차는 사람</a>을 만나게
-          된다. <a class="highlight-text pink">이 사람</a>이라면 자신도 '평범한
-          관계'를 이룰 수 있을지도?
+          <a class="highlight-text pink">"엄청 좋아해!"로 가득차는 사람</a>을
+          만나게 된다. <a class="highlight-text pink">이 사람</a>이라면 자신도
+          '평범한 관계'를 이룰 수 있을지도?
         </div>
       </div>
     </div>
@@ -41,24 +44,24 @@
           <span class="eng-name alley">Alley Kim</span>
         </div>
         <div class="bio">
-          2<span class="mosaic"> </span>세, 여성, 비능력자, 한국 출생, 컴퓨터 프로그래머
+          2<span class="mosaic"> </span>세, 여성, 비능력자, 한국 출생, 컴퓨터
+          프로그래머
         </div>
         <div class="desc alley">
-          평범한 인생, 반복되는 무료한 날들. 이를 타파해보고자 훌쩍 떠나간
-          영국에서 <a class="highlight-text yellow">어떤 남성</a>을 마주하고 첫눈에 반하게 된다. 게다가 어찌저찌 알게
-          된 정보로는, 자기가 속한 재단을 위해 남몰래 위험한 짓까지 한다는
-          소문이.<br />
-          <a class="highlight-text yellow">이 사람</a>이라면 자신의 인생을 좀 특별하게
-          바꿀 수 있을지도?<br />
-          그리고 결심하게 된다.
-          <a class="highlight-text yellow">이 사람</a>에게 도움이 될 수만 있다면,
-          무엇이든 하겠노라고.
+          평범한 인생, 반복되는 무료한 날들. 어쩌다 가진 직업마저 변수를
+          입력하면 '결과가 정해져있는' 프로그래머인, 지극히 평범한 사람.<br />
+          이런 무료함을 타파해보고자 훌쩍 떠나간 영국에서
+          <a class="highlight-text yellow">어떤 남성</a>을 마주하고 첫눈에
+          반하게 된다. 게다가 어찌저찌 알게 된 정보로는, 자기가 속한 재단을 위해
+          남몰래 위험한 짓까지 한다는 소문이.<br />
+          <a class="highlight-text yellow">이 사람</a>이라면 자신의 인생을 좀
+          특별하게 바꿀 수 있을지도?
         </div>
       </div>
       <div class="profile-pic">
         <img
           src="@/assets/imgs/introduce/prof-alley.png"
-          style="box-shadow: 7px 5px 3px rgba(255, 150, 143, 0.4)"
+          style="box-shadow: 7px 5px 3px rgba(71, 45, 45, 0.4)"
         />
         <div class="profile-pic-caption">cm.@commi_59</div>
       </div>
