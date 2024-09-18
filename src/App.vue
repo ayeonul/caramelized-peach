@@ -20,7 +20,7 @@
           <div class="stacked-paper paper-2"></div>
         </div>
         <Header ref="header" />
-        <router-view class="route-view no-scrollbar" />
+        <router-view class="route-view no-scrollbar" :class="{'route-intro':isIntroduce}" />
         <div class="spacer"></div>
       </div>
     </transition>
@@ -51,6 +51,9 @@ export default {
     isNotRoute() {
       return this.$route.path == "/";
     },
+    isIntroduce(){
+      return this.$route.path == "/introduce";
+    }
   },
   data() {
     return {};

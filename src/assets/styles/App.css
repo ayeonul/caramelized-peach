@@ -266,9 +266,12 @@ input[type="checkbox"]:checked + label::after {
     padding: 0;
   }
   .route-view{
-    height: calc(100% - 20rem);;
+    height: 100%;
     width: calc(100% - 4rem);
     padding: 1rem 2rem;
+  }
+  .route-intro{
+    height: calc(100% - 20rem);
   }
 }
 
