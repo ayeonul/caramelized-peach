@@ -275,6 +275,10 @@ input[type="checkbox"]:checked + label::after {
   }
 }
 
+/* @media (max-width: 500px){
+
+} */
+
 
 @font-face {
   font-family: "garam lotus";
